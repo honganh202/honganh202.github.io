@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create a new Key Pair on AWS System Manager</title>
+    <link>/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-1-create-a-new-key-pair/</link>
+    <description>Recent content in Create a new Key Pair on AWS System Manager</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-1-create-a-new-key-pair/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

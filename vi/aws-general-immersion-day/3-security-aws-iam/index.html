@@ -1,0 +1,2665 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.0" />
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Bảo mật - AWS IAM :: AWS System Manager</title>
+
+    
+    <link href="/css/nucleus.css?1675180751" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675180751" rel="stylesheet">
+    <link href="/css/hybrid.css?1675180751" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675180751" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675180751" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675180751" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675180751" rel="stylesheet">
+    <link href="/css/theme.css?1675180751" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675180751" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1675180751" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1675180751"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/vi/aws-general-immersion-day/3-security-aws-iam/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1675180751"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675180751"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/vi";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1675180751"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/" title="Ngày hòa nhập chung của AWS" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/">
+          Ngày hòa nhập chung của AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/" title="Điện toán - Amazon EC2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/">
+           <b> 1. </b> Điện toán - Amazon EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/" title="Phòng thí nghiệm thực hành EC2 Linux" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/">
+           <b> 1.1 </b> Phòng thí nghiệm thực hành EC2 Linux
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-1-create-a-new-key-pair/" title="Tạo cặp khóa mới" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-1-create-a-new-key-pair/">
+           <b> 1.1.1 </b> Tạo cặp khóa mới
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-2-launch-a-web-server-instance/" title="Khởi chạy phiên bản máy chủ web" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-2-launch-a-web-server-instance/">
+           <b> 1.1.2 </b> Khởi chạy phiên bản máy chủ web
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-3-connect-to-your-linux-instance-using-session-manager-optional/" title="Kết nối với phiên bản Linux của bạn bằng Trình quản lý phiên (Tùy chọn)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-3-connect-to-your-linux-instance-using-session-manager-optional/">
+           <b> 1.1.3 </b> Kết nối với phiên bản Linux của bạn bằng Trình quản lý phiên (Tùy chọn)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-4-connect-to-your-linux-instance/" title="Kết nối với phiên bản Linux của bạn" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-4-connect-to-your-linux-instance/">
+           <b> 1.1.4 </b> Kết nối với phiên bản Linux của bạn
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-5-connect-to-ec2-instance-using-putty-optional/" title="Kết nối với Phiên bản EC2 bằng PuTTy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-5-connect-to-ec2-instance-using-putty-optional/">
+           <b> 1.1.5 </b> Kết nối với Phiên bản EC2 bằng PuTTy
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-6-clean-up-resources/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-6-clean-up-resources/">
+           <b> 1.1.6 </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/" title="Phòng thí nghiệm thực hành EC2 Linux" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/">
+           <b> 1.2 </b> Phòng thí nghiệm thực hành EC2 Linux
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-1-create-a-new-key-pair/" title="Tạo cặp khóa mới" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-1-create-a-new-key-pair/">
+           <b> 1.2.1 </b> Tạo cặp khóa mới
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-2-launch-a-web-server-instance/" title="Khởi chạy phiên bản máy chủ web" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-2-launch-a-web-server-instance/">
+           <b> 1.2.2 </b> Khởi chạy phiên bản máy chủ web
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-3-connecting-to-your-windows-instance/" title="Kết nối với Windows Instance của bạn" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-3-connecting-to-your-windows-instance/">
+           <b> 1.2.3 </b> Kết nối với Windows Instance của bạn
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-4-change-ec2-instance-type-optional/" title="Thay đổi loại phiên bản EC2 (Tùy chọn)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-4-change-ec2-instance-type-optional/">
+           <b> 1.2.4 </b> Thay đổi loại phiên bản EC2 (Tùy chọn)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-5-elastic-ips-optional/" title="IP đàn hồi (Tùy chọn)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-5-elastic-ips-optional/">
+           <b> 1.2.5 </b> IP đàn hồi (Tùy chọn)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-6-clean-up-resources/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-2-ec2-windows-hands-on-lab/1-2-6-clean-up-resources/">
+           <b> 1.2.6 </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/" title="Tự động thay đổi quy mô trên AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/">
+           <b> 1.3 </b> Tự động thay đổi quy mô trên AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/" title="Tự động thay đổi quy mô EC2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/">
+           <b> 1.3.1 </b> Tự động thay đổi quy mô EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-1-lab-prerequisites/" title="Điều kiện tiên quyết của phòng thí nghiệm" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-1-lab-prerequisites/">
+           <b> 1.3.1.1 </b> Điều kiện tiên quyết của phòng thí nghiệm
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-2-creating-a-launch-template/" title="Tạo mẫu khởi chạy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-2-creating-a-launch-template/">
+           <b> 1.3.1.2 </b> Tạo mẫu khởi chạy
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-3-setup-an-auto-scaling-group/" title="Thiết lập nhóm Auto Scaling" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-3-setup-an-auto-scaling-group/">
+           <b> 1.3.1.3 </b> Thiết lập nhóm Auto Scaling
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-4-configuring-security-groups/" title="Định cấu hình nhóm bảo mật" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-4-configuring-security-groups/">
+           <b> 1.3.1.4 </b> Định cấu hình nhóm bảo mật
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-5-testing-the-auto-scaling-group/" title="Kiểm tra nhóm Auto Scaling" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-5-testing-the-auto-scaling-group/">
+           <b> 1.3.1.5 </b> Kiểm tra nhóm Auto Scaling
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-6-auto-scaling-lab-teardown/" title="Xóa Cân bằng tải của bạn" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/1-compute-amazon-ec2/1-3-auto-scalin-on-aws/1-3-1ec2-auto-scaling/1-3-1-6-auto-scaling-lab-teardown/">
+           <b> 1.3.1.6 </b> Xóa Cân bằng tải của bạn
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/" title="Mạng - Amazon VPC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/">
+           <b> 2. </b> Mạng - Amazon VPC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/" title="Phòng thí nghiệm thực hành VPC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/">
+           <b> 2.1 </b> Phòng thí nghiệm thực hành VPC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-1-create-a-vpc/" title="Tạo một VPC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-1-create-a-vpc/">
+           <b> 2.1.1 </b> Tạo một VPC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-2-creating-additional-subnets/" title="Tạo các mạng con bổ sung" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-2-creating-additional-subnets/">
+           <b> 2.1.2 </b> Tạo các mạng con bổ sung
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-3-edit-the-routing-table/" title="Chỉnh sửa bảng định tuyến" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-3-edit-the-routing-table/">
+           <b> 2.1.3 </b> Chỉnh sửa bảng định tuyến
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-4-create-security-group/" title="Tạo nhóm bảo mật" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-4-create-security-group/">
+           <b> 2.1.4 </b> Tạo nhóm bảo mật
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-5-vpc-flow-logs-optional/" title="Nhật ký luồng VPC (Tùy chọn)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-5-vpc-flow-logs-optional/">
+           <b> 2.1.5 </b> Nhật ký luồng VPC (Tùy chọn)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-6-clean-up-resources/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-1-vpc-hands-on-lab/2-1-6-clean-up-resources/">
+           <b> 2.1.6 </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/" title="Amazon API Gateway bắt tay vào phòng thí nghiệm" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/">
+           <b> 2.2 </b> Amazon API Gateway bắt tay vào phòng thí nghiệm
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-1-pre-requisite/" title="Điều kiện tiên quyết và triển khai Lambda" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-1-pre-requisite/">
+           <b> 2.2.1 </b> Điều kiện tiên quyết và triển khai Lambda
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-2-create-your-first-api/" title="Tạo API đầu tiên của bạn" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-2-create-your-first-api/">
+           <b> 2.2.2 </b> Tạo API đầu tiên của bạn
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-3-message-transformation/" title="Chuyển đổi tin nhắn" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-3-message-transformation/">
+           <b> 2.2.3 </b> Chuyển đổi tin nhắn
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-4-request-validation/" title="Xác thực yêu cầu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-4-request-validation/">
+           <b> 2.2.4 </b> Xác thực yêu cầu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-5-authentication-and-authorization/" title="Xác thực và ủy quyền" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-5-authentication-and-authorization/">
+           <b> 2.2.5 </b> Xác thực và ủy quyền
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-6-apideployment/" title="Triển khai API" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-6-apideployment/">
+           <b> 2.2.6 </b> Triển khai API
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-7-message-caching-optional/" title="Bộ nhớ đệm tin nhắn (Tùy chọn)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-7-message-caching-optional/">
+           <b> 2.2.7 </b> Bộ nhớ đệm tin nhắn (Tùy chọn)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-8-usage-plansmessage-throttling/" title="Gói sử dụng và điều chỉnh tin nhắn (Tùy chọn)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-8-usage-plansmessage-throttling/">
+           <b> 2.2.8 </b> Gói sử dụng và điều chỉnh tin nhắn (Tùy chọn)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-9-clean-up-resources/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-9-clean-up-resources/">
+           <b> 2.2.9 </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/3-security-aws-iam/" title="Bảo mật - AWS IAM" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/3-security-aws-iam/">
+           <b> 3. </b> Bảo mật - AWS IAM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/" title="Phòng thí nghiệm thực hành IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/">
+           <b> 3.1 </b> Phòng thí nghiệm thực hành IAM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-1-launchec2instanceswithtags/" title="Khởi chạy phiên bản EC2 có thẻ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-1-launchec2instanceswithtags/">
+           <b> 3.1.1 </b> Khởi chạy phiên bản EC2 có thẻ
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-2-createawsiami-dentities/" title="Tạo danh tính AWS IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-2-createawsiami-dentities/">
+           <b> 3.1.2 </b> Tạo danh tính AWS IAM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-3-testtheaccessresources/" title="Kiểm tra quyền truy cập tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-3-testtheaccessresources/">
+           <b> 3.1.3 </b> Kiểm tra quyền truy cập tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-4-assigniamrole/" title="Chỉ định vai trò IAM cho phiên bản EC2 và kiểm tra quyền truy cập" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-4-assigniamrole/">
+           <b> 3.1.4 </b> Chỉ định vai trò IAM cho phiên bản EC2 và kiểm tra quyền truy cập
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-5-cleanup-resources/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-5-cleanup-resources/">
+           <b> 3.1.5 </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/aws-general-immersion-day/3-security-aws-iam/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="/vi/aws-general-immersion-day/3-security-aws-iam/" selected>Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=8028667&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>31-01-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i> <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+                <a href="https://www.linkedin.com/in/hạnh-phạm-725b7322a/"  style="color:orange">Hồng Ánh </a> <br>
+               
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>AWS System Manager</a> > <a href='/vi/aws-general-immersion-day/'>Ngày hòa nhập chung của AWS</a> > Bảo mật - AWS IAM
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Bảo mật - AWS IAM
+            </h1>
+          
+
+        
+
+
+
+	<hr>
+<p><img src="/images/aws-security-service.png?featherlight=false&amp;width=90pc" alt=""></p>
+<p>Khi sử dụng AWS, bạn sẽ có được quyền kiểm soát và sự tự tin cần thiết để vận hành doanh nghiệp của mình một cách an toàn với môi trường điện toán đám mây bảo mật và linh hoạt nhất hiện nay. Là khách hàng của AWS, bạn sẽ được hưởng lợi từ các trung tâm dữ liệu AWS và mạng được thiết kế để bảo vệ thông tin, danh tính, ứng dụng và thiết bị của bạn. Với AWS, bạn có thể cải thiện khả năng đáp ứng các yêu cầu tuân thủ và bảo mật cốt lõi, chẳng hạn như vị trí dữ liệu, khả năng bảo vệ và tính bảo mật bằng các dịch vụ và tính năng toàn diện của chúng tôi.</p>
+<p>AWS cho phép bạn tự động hóa các tác vụ bảo mật thủ công để bạn có thể chuyển trọng tâm sang mở rộng quy mô và đổi mới doanh nghiệp của mình. Ngoài ra, bạn chỉ trả tiền cho các dịch vụ mà bạn sử dụng. Tất cả khách hàng đều được hưởng lợi từ việc AWS là đám mây thương mại duy nhất có dịch vụ cung cấp và chuỗi cung ứng liên quan được kiểm tra và chấp nhận là đủ an toàn cho khối lượng công việc tối mật.</p>
+<ul>
+<li>[Tài nguyên bổ sung]</li>
+<li>[Giới thiệu IAM]</li>
+<li>[Các phương pháp hay nhất của IAM]</li>
+<li>[Chính sách IAM]</li>
+<li>[Hướng dẫn IAM]</li>
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/vi/aws-general-immersion-day/2-network-amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-9-clean-up-resources/" title="Dọn dẹp tài nguyên"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/vi/aws-general-immersion-day/3-security-aws-iam/3-1-iam-hands-on-lab/" title="Phòng thí nghiệm thực hành IAM" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1675180751"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675180751"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675180751"></script>
+    <script src="/js/jquery.sticky.js?1675180751"></script>
+    <script src="/js/featherlight.min.js?1675180751"></script>
+    <script src="/js/highlight.pack.js?1675180751"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675180751"></script>
+    <script src="/js/learn.js?1675180751"></script>
+    <script src="/js/hugo-learn.js?1675180751"></script>
+
+    <link href="/mermaid/mermaid.css?1675180751" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675180751"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

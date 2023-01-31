@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Create AWS IAM Identities on AWS System Manager</title>
+    <link>/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-2-createawsiami-dentities/</link>
+    <description>Recent content in Create AWS IAM Identities on AWS System Manager</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/3-security-aws-iam/3-1-iam-hands-on-lab/3-1-2-createawsiami-dentities/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

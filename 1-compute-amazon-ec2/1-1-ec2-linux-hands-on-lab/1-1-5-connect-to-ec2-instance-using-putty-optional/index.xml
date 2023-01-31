@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Connect to EC2 Instance using PuTTy (Optional) on AWS System Manager</title>
+    <link>/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-5-connect-to-ec2-instance-using-putty-optional/</link>
+    <description>Recent content in Connect to EC2 Instance using PuTTy (Optional) on AWS System Manager</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/1-compute-amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-5-connect-to-ec2-instance-using-putty-optional/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
