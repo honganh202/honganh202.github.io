@@ -12,21 +12,21 @@
     <title>Tạo danh tính AWS IAM :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675938432" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675938432" rel="stylesheet">
-    <link href="/css/hybrid.css?1675938432" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675938432" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675938432" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675938432" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675938432" rel="stylesheet">
-    <link href="/css/theme.css?1675938432" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675938432" rel="stylesheet">
+    <link href="/css/nucleus.css?1675940403" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675940403" rel="stylesheet">
+    <link href="/css/hybrid.css?1675940403" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675940403" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675940403" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675940403" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675940403" rel="stylesheet">
+    <link href="/css/theme.css?1675940403" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675940403" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675938432" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675940403" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675938432"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675940403"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675938432"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675938432"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675940403"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675940403"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675938432"></script>
+<script type="text/javascript" src="/js/search.js?1675940403"></script>
 
     
   </div>
@@ -1755,8 +1755,8 @@
         }
     ]
 }
-</code></pre><p>Nhấp vào tab JSON và dán chính sách ở trên và nhấp vào nút <strong>Tiếp theo: Thẻ</strong>.</p>
-<p><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%934.png?featherlight=false&amp;width=70pc" alt=""></p>
+</code></pre><p>Nhấp vào tab JSON và dán chính sách ở trên và nhấp vào nút <strong>Tiếp theo: Thẻ</strong>.
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%934.png?featherlight=false&amp;width=70pc" alt=""></p>
 <ol start="5">
 <li>Giữ cài đặt mặc định ở bước tiếp theo, nhấp vào nút <strong>Tiếp theo: Xem lại</strong>. Viết DevPolicy trong phần tên và viết mô tả cho chính sách này. Tiếp theo bấm vào nút Tạo chính sách.
 <img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%935.png?featherlight=false&amp;width=70pc" alt=""></li>
@@ -1777,29 +1777,18 @@
 <td>Mô tả</td>
 <td>Chính sách IAM cho Nhóm nhà phát triển</td>
 </tr>
-<tr>
-<td>6. Nhấp vào <strong>Nhóm người dùng</strong> ở phía bên trái của bảng điều khiển IAM, sau đó nhấp vào nút <strong>Tạo nhóm</strong> ở trên cùng của góc bên phải.</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%936.png?featherlight=false&amp;width=70pc" alt=""></td>
-<td></td>
-</tr>
-<tr>
-<td>7. Nhập <code>dev-group</code> cho <strong>Tên nhóm người dùng</strong> và chọn <code>DevPolicy</code> trong phần <strong>Đính kèm chính sách quyền - Tùy chọn</strong>.</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%937.png?featherlight=false&amp;width=70pc" alt=""></td>
-<td></td>
-</tr>
-<tr>
-<td><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%938.png?featherlight=false&amp;width=70pc" alt=""></td>
-<td></td>
-</tr>
 </tbody>
 </table>
-<ol start="8">
+<ol start="6">
+<li>
+<p>Nhấp vào <strong>Nhóm người dùng</strong> ở phía bên trái của bảng điều khiển IAM, sau đó nhấp vào nút <strong>Tạo nhóm</strong> ở trên cùng của góc bên phải.
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%936.png?featherlight=false&amp;width=70pc" alt=""></p>
+</li>
+<li>
+<p>Nhập <code>dev-group</code> cho <strong>Tên nhóm người dùng</strong> và chọn <code>DevPolicy</code> trong phần <strong>Đính kèm chính sách quyền - Tùy chọn</strong>.
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%937.png?featherlight=false&amp;width=70pc" alt="">
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%938.png?featherlight=false&amp;width=70pc" alt=""></p>
+</li>
 <li>
 <p>Nhấp vào <strong>Người dùng</strong> ở phía bên trái của trang, sau đó nhấp vào nút <strong>Thêm người dùng</strong>.
 <img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%939.png?featherlight=false&amp;width=70pc" alt=""></p>
@@ -1810,8 +1799,8 @@
 </li>
 <li>
 <p>Chọn nhóm nhà phát triển mà chúng tôi đã tạo ngay trước đó và nhấp vào nút Tiếp theo: Thẻ. Bỏ qua trang Thêm người dùng và chuyển sang bước tiếp theo.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%9311.png?featherlight=false&amp;width=70pc" alt=""></p>
-<p>Nhấp vào nút Tạo người dùng để thêm người dùng phát triển.
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%9311.png?featherlight=false&amp;width=70pc" alt="">
+Nhấp vào nút Tạo người dùng để thêm người dùng phát triển.
 <img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/2-CreateAWSIAMIdentities/2-CreateAWSIAMIdentities%E2%80%9312.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 </ol>
@@ -2677,19 +2666,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675938432"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675938432"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675938432"></script>
-    <script src="/js/jquery.sticky.js?1675938432"></script>
-    <script src="/js/featherlight.min.js?1675938432"></script>
-    <script src="/js/highlight.pack.js?1675938432"></script>
+    <script src="/js/clipboard.min.js?1675940403"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675940403"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675940403"></script>
+    <script src="/js/jquery.sticky.js?1675940403"></script>
+    <script src="/js/featherlight.min.js?1675940403"></script>
+    <script src="/js/highlight.pack.js?1675940403"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675938432"></script>
-    <script src="/js/learn.js?1675938432"></script>
-    <script src="/js/hugo-learn.js?1675938432"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675940403"></script>
+    <script src="/js/learn.js?1675940403"></script>
+    <script src="/js/hugo-learn.js?1675940403"></script>
 
-    <link href="/mermaid/mermaid.css?1675938432" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675938432"></script>
+    <link href="/mermaid/mermaid.css?1675940403" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675940403"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
