@@ -12,21 +12,21 @@
     <title>Launch a Web Server Instance :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675183120" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675183120" rel="stylesheet">
-    <link href="/css/hybrid.css?1675183120" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675183120" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675183120" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675183120" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675183120" rel="stylesheet">
-    <link href="/css/theme.css?1675183120" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675183120" rel="stylesheet">
+    <link href="/css/nucleus.css?1675937935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675937935" rel="stylesheet">
+    <link href="/css/hybrid.css?1675937935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675937935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675937935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675937935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675937935" rel="stylesheet">
+    <link href="/css/theme.css?1675937935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675937935" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675183120" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675937935" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675183120"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675937935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675183120"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675183120"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675937935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675937935"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675183120"></script>
+<script type="text/javascript" src="/js/search.js?1675937935"></script>
 
     
   </div>
@@ -1741,13 +1741,15 @@
 <img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-2.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
-<p>In the Network Settings section, configure the security group to Allow RDP and HTTP from the internet.</p>
+<p>In the Network Settings section, configure the security group to Allow RDP and HTTP from the internet.
+Note: EC2 instances will be mined in the default VPC and default subnet in any availability zones. This instance will also be automatically assigned a public IP address. To change any of these settings, you can click the &ldquo;Edit Only&rdquo; button
+<img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-3.png?featherlight=false&amp;width=70pc" alt=""></p>
+</li>
+<li>
+<p>Expand the <strong>Advanced Details</strong> tab at the bottom of the screen and enter the following values ​​in the User Data Field. Faced with all the different choices, accept the defaults. If you want to learn more about the options in Advanced details, select Info next to it.
+<img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-4.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 </ol>
-<p>Note: EC2 instances will be mined in the default VPC and default subnet in any availability zones. This instance will also be automatically assigned a public IP address. To change any of these settings, you can click the &ldquo;Edit Only&rdquo; button
-<img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-3.png?featherlight=false&amp;width=70pc" alt="">
-6. Expand the <strong>Advanced Details</strong> tab at the bottom of the screen and enter the following values ​​in the User Data Field. Faced with all the different choices, accept the defaults. If you want to learn more about the options in Advanced details, select Info next to it.
-<img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-4.png?featherlight=false&amp;width=70pc" alt=""></p>
 <h4 id="user-data">User Data</h4>
 <pre tabindex="0"><code>&lt;powershell&gt;
 Import-Module ServerManager;
@@ -1802,9 +1804,9 @@ $shell.Namespace(&#34;c:\inetpub\wwwroot\&#34;).copyhere($item)
 <li>Click the <strong>View</strong> instances button in the lower right part of the screen to see a list of EC2 instances. Once your instance has started, you will see your Web Server as well as the Availability Zone in which the instance is located and <strong>DNS name</strong> can be publicly routed. Check the checkbox next to your web server to see details about this EC2 instance.
 <img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-6.png?featherlight=false&amp;width=70pc" alt=""></li>
 <li>Open a new browser tab and browse the Web Server by entering the <strong>DNS IPv4 Plus</strong> name of the EC2 instance into the browser. You can find your EC2 instance&rsquo;s public DNS name in the console by reviewing the line of public IPv4 DNS names highlighted above. You will see a web page that looks like the following
-<img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-7.png?featherlight=false&amp;width=70pc" alt=""></li>
+<img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-7.png?featherlight=false&amp;width=70pc" alt="">
+<img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-8.png?featherlight=false&amp;width=70pc" alt=""></li>
 </ol>
-<p><img src="/images/1-Compute-AmazonEC2/1-2-EC2WindowsHandsonLab/1-2-2-LaunchaWebServerInstance/LaunchaWebServerInstance-2-8.png?featherlight=false&amp;width=70pc" alt=""></p>
 
 
 
@@ -2662,19 +2664,19 @@ $shell.Namespace(&#34;c:\inetpub\wwwroot\&#34;).copyhere($item)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675183120"></script>
-    <script src="/js/jquery.sticky.js?1675183120"></script>
-    <script src="/js/featherlight.min.js?1675183120"></script>
-    <script src="/js/highlight.pack.js?1675183120"></script>
+    <script src="/js/clipboard.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675937935"></script>
+    <script src="/js/jquery.sticky.js?1675937935"></script>
+    <script src="/js/featherlight.min.js?1675937935"></script>
+    <script src="/js/highlight.pack.js?1675937935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675183120"></script>
-    <script src="/js/learn.js?1675183120"></script>
-    <script src="/js/hugo-learn.js?1675183120"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675937935"></script>
+    <script src="/js/learn.js?1675937935"></script>
+    <script src="/js/hugo-learn.js?1675937935"></script>
 
-    <link href="/mermaid/mermaid.css?1675183120" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675183120"></script>
+    <link href="/mermaid/mermaid.css?1675937935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675937935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>Kiểm tra quyền truy cập tài nguyên :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675183121" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675183121" rel="stylesheet">
-    <link href="/css/hybrid.css?1675183121" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675183121" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675183121" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675183121" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675183121" rel="stylesheet">
-    <link href="/css/theme.css?1675183121" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675183121" rel="stylesheet">
+    <link href="/css/nucleus.css?1675937936" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675937936" rel="stylesheet">
+    <link href="/css/hybrid.css?1675937936" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675937936" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675937936" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675937936" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675937936" rel="stylesheet">
+    <link href="/css/theme.css?1675937936" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675937936" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675183121" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675937936" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675183121"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675937936"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675183121"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675183121"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675937936"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675937936"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675183121"></script>
+<script type="text/javascript" src="/js/search.js?1675937936"></script>
 
     
   </div>
@@ -1727,48 +1727,50 @@
 <ol>
 <li>
 <p>Đăng nhập bảng điều khiển AWS và kiểm tra <strong>Người dùng IAM</strong> và bí danh tài khoản. Ngoài ra, hãy kiểm tra <strong>khu vực AWS</strong> để định vị các phiên bản EC2 đã khởi chạy.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%931.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%931.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Chuyển sang bảng điều khiển EC2 và nhấp vào menu <strong>Instances</strong>. Chọn phiên bản có tên là phiên bản prod và nhấp vào nút <strong>Trạng thái phiên bản</strong> và nút <strong>Dừng phiên bản</strong>. Và nhấp vào nút <strong>Dừng</strong> trong cửa sổ bật lên.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%932.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%932.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Một dấu hiệu cảnh báo xuất hiện rằng <code>dev-user</code> không có quyền thực hiện thao tác dừng phiên bản EC2. Điều này là do phòng thí nghiệm trước đó chỉ cho phép <strong>người dùng nhà phát triển</strong> thực hiện hành động dừng trên các phiên bản ec2 bằng thẻ tài nguyên <strong>Env(key)-dev(value)</strong>.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%933.png?featherlight=false&amp;width=90pc" alt="">
-4.Chọn phiên bản có tên <strong>dev-instance</strong> và nhấp vào nút <strong>Trạng thái phiên bản</strong> và nút <strong>Dừng phiên bản</strong>. Và nhấp vào nút <strong>Dừng</strong> trong cửa sổ bật lên.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%934.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%933.png?featherlight=false&amp;width=70pc" alt=""></p>
+</li>
+<li>
+<p>Chọn phiên bản có tên <strong>dev-instance</strong> và nhấp vào nút <strong>Trạng thái phiên bản</strong> và nút <strong>Dừng phiên bản</strong>. Và nhấp vào nút <strong>Dừng</strong> trong cửa sổ bật lên.
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%934.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Sau vài giây, bạn có thể thấy phiên bản nhà phát triển đã bị dừng.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%935.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%935.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 </ol>
 <h4 id="mẹo---trình-mô-phỏng-chính-sách-iam-tùy-chọn">Mẹo - Trình mô phỏng chính sách IAM (Tùy chọn)</h4>
 <ol>
 <li>
 <p>Di chuyển đến trình giả lập Chính sách IAM.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%936.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%936.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Chọn nhóm nhà phát triển</p>
 </li>
 <li>
 <p>Chọn hành động DeleteTags và StopInstances để kiểm tra.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%937.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%937.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Bạn có thể thấy cả hai hành động đều bị từ chối nhưng với những lý do khác nhau. <strong>DeleteTags</strong> bị từ chối do có 1 câu lệnh khớp và <strong>StopInstances</strong> bị từ chối Hoàn toàn (không có câu lệnh khớp).
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%938.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%938.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Mở rộng DeleteTags và nhấp vào Hiển thị câu lệnh trong DevPolicy (Chính sách IAM). Nó tự động đánh dấu câu lệnh khớp chính xác với hành động mô phỏng của bạn.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%939.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%939.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Mở rộng StopInstances. Hành động bị từ chối vì tài nguyên mô phỏng là &ldquo;*&rdquo;. Xin lưu ý rằng nhóm nhà phát triển chỉ có thể dừng các phiên bản EC2 có thẻ nhà phát triển.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%9310.png?featherlight=false&amp;width=90pc" alt="">
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%9311.png?featherlight=false&amp;width=90pc" alt="">
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%9310.png?featherlight=false&amp;width=70pc" alt="">
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%9311.png?featherlight=false&amp;width=70pc" alt="">
 Bây giờ chúng tôi sẽ kiểm tra chính sách sau khi thêm thẻ dev để xác thực chính sách một cách chính xác.</p>
 </li>
 </ol>
@@ -2629,19 +2631,19 @@ Bây giờ chúng tôi sẽ kiểm tra chính sách sau khi thêm thẻ dev đ�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675183121"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675183121"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675183121"></script>
-    <script src="/js/jquery.sticky.js?1675183121"></script>
-    <script src="/js/featherlight.min.js?1675183121"></script>
-    <script src="/js/highlight.pack.js?1675183121"></script>
+    <script src="/js/clipboard.min.js?1675937936"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675937936"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675937936"></script>
+    <script src="/js/jquery.sticky.js?1675937936"></script>
+    <script src="/js/featherlight.min.js?1675937936"></script>
+    <script src="/js/highlight.pack.js?1675937936"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675183121"></script>
-    <script src="/js/learn.js?1675183121"></script>
-    <script src="/js/hugo-learn.js?1675183121"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675937936"></script>
+    <script src="/js/learn.js?1675937936"></script>
+    <script src="/js/hugo-learn.js?1675937936"></script>
 
-    <link href="/mermaid/mermaid.css?1675183121" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675183121"></script>
+    <link href="/mermaid/mermaid.css?1675937936" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675937936"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

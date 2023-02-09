@@ -12,21 +12,21 @@
     <title>Kết nối với phiên bản Linux của bạn bằng Trình quản lý phiên (Tùy chọn) :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675183120" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675183120" rel="stylesheet">
-    <link href="/css/hybrid.css?1675183120" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675183120" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675183120" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675183120" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675183120" rel="stylesheet">
-    <link href="/css/theme.css?1675183120" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675183120" rel="stylesheet">
+    <link href="/css/nucleus.css?1675937935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675937935" rel="stylesheet">
+    <link href="/css/hybrid.css?1675937935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675937935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675937935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675937935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675937935" rel="stylesheet">
+    <link href="/css/theme.css?1675937935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675937935" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675183120" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675937935" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675183120"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675937935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675183120"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675183120"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675937935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675937935"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675183120"></script>
+<script type="text/javascript" src="/js/search.js?1675937935"></script>
 
     
   </div>
@@ -1728,15 +1728,15 @@
 <h4 id="tạo-hồ-sơ-phiên-bản-iam-cho-trình-quản-lý-hệ-thống">Tạo hồ sơ phiên bản IAM cho Trình quản lý hệ thống</h4>
 <ol>
 <li>Điều hướng đến <a href="https://us-east-1.console.aws.amazon.com/iamv2/home#/home">bảng điều khiển IAM</a>. Trong ngăn điều hướng, chọn <strong>Vai trò</strong> rồi chọn <strong>Tạo vai trò</strong> .
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-1.png?featherlight=false&amp;width=70pc" alt=""></li>
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-1.png?featherlight=false&amp;width=70pc" alt="">
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-2.png?featherlight=false&amp;width=70pc" alt=""></li>
+<li>Trong Chọn loại thực thể đáng tin cậy , hãy chọn dịch vụ AWS . Ngay bên dưới Chọn dịch vụ sẽ sử dụng vai trò này , chọn EC2 rồi chọn Tiếp theo.
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-3.png?featherlight=false&amp;width=70pc" alt=""></li>
+<li>Trên <strong>trang Chính sách quyền đính kèm</strong> , hãy làm như sau: Sử dụng trường Tìm kiếm để định vị <strong>AmazonSSMManagedInstanceCore</strong> . Chọn hộp bên cạnh tên của nó. Chọn <strong>Tiếp theo</strong>.
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-4.png?featherlight=false&amp;width=70pc" alt=""></li>
+<li>Chọn <strong>Kết nối</strong> . Một phiên mới sẽ được bắt đầu trong một tab mới. Sau khi phiên bắt đầu, bạn có thể chạy các lệnh bash như bạn thực hiện thông qua bất kỳ loại kết nối nào khác.
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-5.png?featherlight=false&amp;width=70pc" alt=""></li>
 </ol>
-<p><img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-2.png?featherlight=false&amp;width=70pc" alt="">
-2. Trong Chọn loại thực thể đáng tin cậy , hãy chọn dịch vụ AWS . Ngay bên dưới Chọn dịch vụ sẽ sử dụng vai trò này , chọn EC2 rồi chọn Tiếp theo.
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-3.png?featherlight=false&amp;width=70pc" alt="">
-3. Trên <strong>trang Chính sách quyền đính kèm</strong> , hãy làm như sau: Sử dụng trường Tìm kiếm để định vị <strong>AmazonSSMManagedInstanceCore</strong> . Chọn hộp bên cạnh tên của nó. Chọn <strong>Tiếp theo</strong>.
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-4.png?featherlight=false&amp;width=70pc" alt="">
-4. Chọn <strong>Kết nối</strong> . Một phiên mới sẽ được bắt đầu trong một tab mới. Sau khi phiên bắt đầu, bạn có thể chạy các lệnh bash như bạn thực hiện thông qua bất kỳ loại kết nối nào khác.
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-5.png?featherlight=false&amp;width=70pc" alt=""></p>
 <h4 id="đính-kèm-hồ-sơ-phiên-bản-trình-quản-lý-hệ-thống-vào-một-phiên-bản-hiện-có-bảng-điều-khiển">Đính kèm hồ sơ phiên bản Trình quản lý hệ thống vào một phiên bản hiện có (bảng điều khiển)</h4>
 <ol>
 <li>Điều hướng tới <a href="https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Home:">bảng điều khiển Amazon EC2</a></li>
@@ -1749,10 +1749,20 @@
 </ol>
 <h4 id="kết-nối-với-phiên-bản-linux-của-bạn-bằng-trình-quản-lý-phiên">Kết nối với phiên bản Linux của bạn bằng Trình quản lý phiên</h4>
 <ol>
-<li>Tại bảng điều khiển phiên bản EC2, chọn phiên bản bạn muốn kết nối, sau đó nhấp vào nút <strong>Kết nối</strong>.
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-8.png?featherlight=false&amp;width=70pc" alt=""></li>
-<li>Trong trang <strong>Kết nối</strong>  với phiên bản, chọn <strong>Trình quản lý phiên</strong>
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-9.png?featherlight=false&amp;width=70pc" alt=""></li>
+<li>
+<p>Tại bảng điều khiển phiên bản EC2, chọn phiên bản bạn muốn kết nối, sau đó nhấp vào nút <strong>Kết nối</strong>.
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-8.png?featherlight=false&amp;width=70pc" alt=""></p>
+</li>
+<li>
+<p>Trong trang <strong>Kết nối</strong>  với phiên bản, chọn <strong>Trình quản lý phiên</strong>
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-3-ConnecttoyourLinuxinstanc/ConnecttoyourLinuxinstanc-9.png?featherlight=false&amp;width=70pc" alt=""></p>
+</li>
+<li>
+<p>Xem lại phần sử dụng Trình quản lý phiên để biết các ưu điểm của việc sử dụng Trình quản lý phiên.</p>
+</li>
+<li>
+<p>Chọn Kết nối. Một phiên mới sẽ được bắt đầu trong một tab mới. Sau khi phiên bắt đầu, bạn có thể chạy các lệnh bash như bạn thực hiện thông qua bất kỳ loại kết nối nào khác.</p>
+</li>
 </ol>
 
 
@@ -2608,19 +2618,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675183120"></script>
-    <script src="/js/jquery.sticky.js?1675183120"></script>
-    <script src="/js/featherlight.min.js?1675183120"></script>
-    <script src="/js/highlight.pack.js?1675183120"></script>
+    <script src="/js/clipboard.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675937935"></script>
+    <script src="/js/jquery.sticky.js?1675937935"></script>
+    <script src="/js/featherlight.min.js?1675937935"></script>
+    <script src="/js/highlight.pack.js?1675937935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675183120"></script>
-    <script src="/js/learn.js?1675183120"></script>
-    <script src="/js/hugo-learn.js?1675183120"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675937935"></script>
+    <script src="/js/learn.js?1675937935"></script>
+    <script src="/js/hugo-learn.js?1675937935"></script>
 
-    <link href="/mermaid/mermaid.css?1675183120" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675183120"></script>
+    <link href="/mermaid/mermaid.css?1675937935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675937935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

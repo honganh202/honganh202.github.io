@@ -12,21 +12,21 @@
     <title>Assign IAM Role for EC2 Instance and Test the access :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675183120" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675183120" rel="stylesheet">
-    <link href="/css/hybrid.css?1675183120" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675183120" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675183120" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675183120" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675183120" rel="stylesheet">
-    <link href="/css/theme.css?1675183120" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675183120" rel="stylesheet">
+    <link href="/css/nucleus.css?1675937935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675937935" rel="stylesheet">
+    <link href="/css/hybrid.css?1675937935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675937935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675937935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675937935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675937935" rel="stylesheet">
+    <link href="/css/theme.css?1675937935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675937935" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675183120" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675937935" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675183120"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675937935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675183120"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675183120"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675937935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675937935"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675183120"></script>
+<script type="text/javascript" src="/js/search.js?1675937935"></script>
 
     
   </div>
@@ -1716,26 +1716,26 @@
 
 
 	<hr>
-<p><img src="/images/IAMRole.png?featherlight=false&amp;width=90pc" alt=""></p>
+<p><img src="/images/IAMRole.png?featherlight=false&amp;width=70pc" alt=""></p>
 <ol>
 <li>
 <p>To create S3 Bucket, enter into the <strong>S3 console</strong> . And then, click <strong>Create bucket</strong> button. For more detail information on Amazon S3, please refer to the Storage on AWS chapter. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%931.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%931.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Enter a unique <strong>bucket name</strong> in the Bucket name field. In this lab, type <code>iam-test-user_name</code>. All bucket names in Amazon S3 have to be unique and cannot be duplicated. Click <strong>Create bucket</strong> button, leaving the remaining settings intact. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%932.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%932.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Upload any file(sample: aws-logo-picture ) in the S3 bucket. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%933.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%933.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Create one more bucket named <code>iam-test-other-user_name</code>. Upload any file in the S3 bucket.</p>
 </li>
 <li>
 <p>Move on to the <strong>IAM console</strong>  to create IAM role for EC2 instance. Click <strong>Roles</strong> on the left side of the IAM console and click <strong>Create role</strong> button. On first step, choose EC2 for trusted entity and click <strong>Next: Permissions</strong>. IAM Role can be applied to many AWS services including EC2 and Lambda, as well as other AWS accounts, Web identity, and SAML 2.0 federation. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%934.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%934.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>In step 2, click Create policy to create a policy to attach to the EC2 instance&rsquo;s role. On the JSON tab, paste the policy below and click Next: Tags.</p>
@@ -1762,26 +1762,26 @@
         }
     ]
 }
-</code></pre><p><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%935.png?featherlight=false&amp;width=90pc" alt=""></p>
+</code></pre><p><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%935.png?featherlight=false&amp;width=70pc" alt=""></p>
 <ol start="7">
 <li>
 <p>To skip adding tags operation, click <strong>Next:Review</strong> and type <code>IAMBucketTestPolicy</code> in the Name input box. Click <strong>Create policy</strong> to attach to IAM role. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%936.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%936.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Back to the page where you were creating IAM Role, press the refresh button on the right corner and type <code>IAMBucketTestPolicy</code>. If you see the policy you just created in the list below, select it and go to the next step.</p>
 </li>
 <li>
 <p>step 4, type IAMBucketTestRole and create role. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%937.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%937.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Move on to the EC2 console  to attach IAM role on the EC2 instance. At this time, if you don&rsquo;t have EC2 instances created in the previous lab, check the top right to see whether AWS Region is properly set up. Select <code>prod-instance</code>, then click the <strong>Connect</strong> button. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%938.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%938.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Connect to instance by using EC2 Instance Connect option, and click <strong>Connect</strong> button. Then the terminal will come out as below. Type aws s3 ls and you cannot get S3 bucket lists. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%9311.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%9311.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Back to the Instances page and select prod-instance. Click Actions button and select Security and click Modify IAM role.</p>
@@ -2653,19 +2653,19 @@ aws s3 ls iam-test-other-user_name
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675183120"></script>
-    <script src="/js/jquery.sticky.js?1675183120"></script>
-    <script src="/js/featherlight.min.js?1675183120"></script>
-    <script src="/js/highlight.pack.js?1675183120"></script>
+    <script src="/js/clipboard.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675937935"></script>
+    <script src="/js/jquery.sticky.js?1675937935"></script>
+    <script src="/js/featherlight.min.js?1675937935"></script>
+    <script src="/js/highlight.pack.js?1675937935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675183120"></script>
-    <script src="/js/learn.js?1675183120"></script>
-    <script src="/js/hugo-learn.js?1675183120"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675937935"></script>
+    <script src="/js/learn.js?1675937935"></script>
+    <script src="/js/hugo-learn.js?1675937935"></script>
 
-    <link href="/mermaid/mermaid.css?1675183120" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675183120"></script>
+    <link href="/mermaid/mermaid.css?1675937935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675937935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

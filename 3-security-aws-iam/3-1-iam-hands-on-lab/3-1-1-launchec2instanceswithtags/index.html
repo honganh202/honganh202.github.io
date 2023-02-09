@@ -12,21 +12,21 @@
     <title>Launch EC2 Instances with Tags :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675183120" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675183120" rel="stylesheet">
-    <link href="/css/hybrid.css?1675183120" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675183120" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675183120" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675183120" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675183120" rel="stylesheet">
-    <link href="/css/theme.css?1675183120" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675183120" rel="stylesheet">
+    <link href="/css/nucleus.css?1675937935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675937935" rel="stylesheet">
+    <link href="/css/hybrid.css?1675937935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675937935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675937935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675937935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675937935" rel="stylesheet">
+    <link href="/css/theme.css?1675937935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675937935" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675183120" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675937935" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675183120"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675937935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675183120"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675183120"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675937935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675937935"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675183120"></script>
+<script type="text/javascript" src="/js/search.js?1675937935"></script>
 
     
   </div>
@@ -1726,7 +1726,7 @@
 	<hr>
 <h3 id="launch-ec2-instances-with-tags">Launch EC2 Instances with Tags</h3>
 <p>In this lab, we will launch two Amazon Linux 2 instances. Suppose one is an EC2 instance used in a development environment and the other one used in a production environment. We will use tags  to distinguish these two instances.
-<img src="/images/EC2-scrt.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/EC2-scrt.png?featherlight=false&amp;width=70pc" alt=""></p>
 <ol>
 <li>
 <p>Enter into EC2 Console  in AWS Management Console.</p>
@@ -1734,25 +1734,25 @@
 <li>
 <p>Click on <strong>EC2 Dashboard</strong> near the top of the leftmost menu. And Click on <strong>Launch instances</strong>.</p>
 <p>In <strong>Name</strong>, enter the value <strong>prod-instance</strong>. And click on Add additional tags. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%931.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%931.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Click <strong>Add tag</strong> then in Key enter Env, and Value enter prod. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%932.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%932.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Check the default settings for Amazon Machine Image and select <strong>t2.micro</strong> in Instance Type. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%933.png?featherlight=false&amp;width=90pc" alt=""></p>
-<ol>
-<li>In <strong>Key pair (login)</strong> select <strong>Proceed without a key pair</strong>. Then click <strong>Launch instance</strong>. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%934.png?featherlight=false&amp;width=90pc" alt=""></li>
-</ol>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%933.png?featherlight=false&amp;width=70pc" alt=""></p>
+</li>
+<li>
+<p>In <strong>Key pair (login)</strong> select <strong>Proceed without a key pair</strong>. Then click <strong>Launch instance</strong>. 
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%934.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>You have launched an EC2 instance for production environment. Now you have to create <strong>one more EC2 instance for development environment</strong>.</p>
 </li>
 </ol>
-<p><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%935.png?featherlight=false&amp;width=90pc" alt=""></p>
+<p><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%935.png?featherlight=false&amp;width=70pc" alt=""></p>
 <table>
 <thead>
 <tr>
@@ -1773,7 +1773,7 @@
 </table>
 <ol start="7">
 <li>After you launched two instances, you can find them in the instances menu in the sidebar. Click the <code>prod-instance</code> checkbox and click the <strong>Tags</strong> tab in the bottom of the page. You can see details about this EC2 instance&rsquo;s tag information. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%936.png?featherlight=false&amp;width=90pc" alt=""></li>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/1-LaunchEC2InstanceswithTags/1-LaunchEC2InstanceswithTags%E2%80%936.png?featherlight=false&amp;width=70pc" alt=""></li>
 </ol>
 
 
@@ -2629,19 +2629,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675183120"></script>
-    <script src="/js/jquery.sticky.js?1675183120"></script>
-    <script src="/js/featherlight.min.js?1675183120"></script>
-    <script src="/js/highlight.pack.js?1675183120"></script>
+    <script src="/js/clipboard.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675937935"></script>
+    <script src="/js/jquery.sticky.js?1675937935"></script>
+    <script src="/js/featherlight.min.js?1675937935"></script>
+    <script src="/js/highlight.pack.js?1675937935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675183120"></script>
-    <script src="/js/learn.js?1675183120"></script>
-    <script src="/js/hugo-learn.js?1675183120"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675937935"></script>
+    <script src="/js/learn.js?1675937935"></script>
+    <script src="/js/hugo-learn.js?1675937935"></script>
 
-    <link href="/mermaid/mermaid.css?1675183120" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675183120"></script>
+    <link href="/mermaid/mermaid.css?1675937935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675937935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

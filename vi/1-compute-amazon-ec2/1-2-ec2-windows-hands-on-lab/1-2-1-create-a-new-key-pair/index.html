@@ -12,21 +12,21 @@
     <title>Tạo cặp khóa mới :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675183120" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675183120" rel="stylesheet">
-    <link href="/css/hybrid.css?1675183120" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675183120" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675183120" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675183120" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675183120" rel="stylesheet">
-    <link href="/css/theme.css?1675183120" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675183120" rel="stylesheet">
+    <link href="/css/nucleus.css?1675937935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675937935" rel="stylesheet">
+    <link href="/css/hybrid.css?1675937935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675937935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675937935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675937935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675937935" rel="stylesheet">
+    <link href="/css/theme.css?1675937935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675937935" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675183120" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675937935" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675183120"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675937935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675183120"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675183120"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675937935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675937935"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675183120"></script>
+<script type="text/javascript" src="/js/search.js?1675937935"></script>
 
     
   </div>
@@ -1727,19 +1727,11 @@
 <h4 id="tạo-cặp-khóa-mới">Tạo cặp khóa mới</h4>
 <p>Trong phòng thí nghiệm này, bạn sẽ cần tạo một phiên bản EC2 bằng cách sử dụng cặp khóa SSH. Các bước sau phác thảo việc tạo một cặp khóa SSH duy nhất để bạn sử dụng trong phòng thí nghiệm này.</p>
 <ol>
-<li>
-<p>Điều hướng tới <a href="https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Home:">bảng điều khiển Amazon EC2</a>. Ở góc trên bên phải của Bảng điều khiển quản lý AWS, hãy xác nhận rằng bạn đang ở khu vực AWS mong muốn.</p>
-</li>
-<li>
-<p>Nhấp vào Cặp khóa trong phần Mạng &amp; Bảo mật ở gần cuối menu ngoài cùng bên trái. Điều này sẽ hiển thị một trang để quản lý các cặp khóa SSH của bạn.</p>
-</li>
-</ol>
-<p><img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-1-CreateanewKeyPair/1-1-1-CreateanewKeyPair-1.png?featherlight=false&amp;width=70pc" alt=""></p>
-<ol start="3">
-<li>Ấn <strong>Tạo cặp khóa</strong> để tạo cặp khóa mới</li>
-</ol>
-<p><img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-1-CreateanewKeyPair/1-1-1-CreateanewKeyPair-2.png?featherlight=false&amp;width=70pc" alt=""></p>
-<ol start="4">
+<li>Điều hướng tới <a href="https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Home:">bảng điều khiển Amazon EC2</a>. Ở góc trên bên phải của Bảng điều khiển quản lý AWS, hãy xác nhận rằng bạn đang ở khu vực AWS mong muốn.</li>
+<li>Nhấp vào Cặp khóa trong phần Mạng &amp; Bảo mật ở gần cuối menu ngoài cùng bên trái. Điều này sẽ hiển thị một trang để quản lý các cặp khóa SSH của bạn.
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-1-CreateanewKeyPair/1-1-1-CreateanewKeyPair-1.png?featherlight=false&amp;width=70pc" alt=""></li>
+<li>Ấn <strong>Tạo cặp khóa</strong> để tạo cặp khóa mới
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-1-CreateanewKeyPair/1-1-1-CreateanewKeyPair-2.png?featherlight=false&amp;width=70pc" alt=""></li>
 <li>Name: <strong>[Tên của bạn]-ImmersionDay</strong>
 Chọn: <strong>.pem</strong> (<em>Đối với người dùng Windows vui lòng chọn ppk cho định dạng tệp.</em>)</li>
 <li>Trang sẽ tải xuống tệp <strong>[Tên của bạn]-ImmersionDay</strong> vào ổ đĩa bố cục. Làm theo hướng dẫn của trình duyệt để lưu tệp vào vị trí tải xuống mặc định. Hãy nhớ đường dẫn đầy đủ đến tệp cặp khóa bạn vừa tải xuống.</li>
@@ -2598,19 +2590,19 @@ Chọn: <strong>.pem</strong> (<em>Đối với người dùng Windows vui lòng
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675183120"></script>
-    <script src="/js/jquery.sticky.js?1675183120"></script>
-    <script src="/js/featherlight.min.js?1675183120"></script>
-    <script src="/js/highlight.pack.js?1675183120"></script>
+    <script src="/js/clipboard.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675937935"></script>
+    <script src="/js/jquery.sticky.js?1675937935"></script>
+    <script src="/js/featherlight.min.js?1675937935"></script>
+    <script src="/js/highlight.pack.js?1675937935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675183120"></script>
-    <script src="/js/learn.js?1675183120"></script>
-    <script src="/js/hugo-learn.js?1675183120"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675937935"></script>
+    <script src="/js/learn.js?1675937935"></script>
+    <script src="/js/hugo-learn.js?1675937935"></script>
 
-    <link href="/mermaid/mermaid.css?1675183120" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675183120"></script>
+    <link href="/mermaid/mermaid.css?1675937935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675937935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

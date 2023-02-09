@@ -12,21 +12,21 @@
     <title>Khởi chạy phiên bản máy chủ web :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675183120" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675183120" rel="stylesheet">
-    <link href="/css/hybrid.css?1675183120" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675183120" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675183120" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675183120" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675183120" rel="stylesheet">
-    <link href="/css/theme.css?1675183120" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675183120" rel="stylesheet">
+    <link href="/css/nucleus.css?1675937935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675937935" rel="stylesheet">
+    <link href="/css/hybrid.css?1675937935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675937935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675937935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675937935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675937935" rel="stylesheet">
+    <link href="/css/theme.css?1675937935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675937935" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675183120" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675937935" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675183120"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675937935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675183120"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675183120"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675937935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675937935"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675183120"></script>
+<script type="text/javascript" src="/js/search.js?1675937935"></script>
 
     
   </div>
@@ -1727,36 +1727,24 @@
 <h4 id="khởi-chạy-phiên-bản-máy-chủ-web">Khởi chạy phiên bản máy chủ web</h4>
 <p>Chúng tôi sẽ khởi chạy một phiên bản Amazon Linux 2, khởi động Apache/PHP và cài đặt một trang web cơ bản sẽ hiển thị thông tin về phiên bản của chúng tôi.</p>
 <ol>
-<li>
-<p>Nhấp vào <strong>Bảng điều khiển EC2</strong> và nhấp vào Khởi chạy phiên bản.
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(1).png?featherlight=false&amp;width=70pc" alt=""></p>
-</li>
-<li>
-<p>Trong Tên , đặt giá trị Máy chủ web cho IMD . Và kiểm tra cài đặt mặc định cho Amazon Machine Image bên dưới.
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(2).png?featherlight=false&amp;width=70pc" alt=""></p>
-</li>
-<li>
-<p>Chọn <strong>t2.micro</strong> trong Loại Phiên bản.</p>
-</li>
-<li>
-<p>Chọn cặp khóa mà bạn đã tạo ở phần tạo cặp khóa mới.</p>
-</li>
-</ol>
-<p><img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(3).png?featherlight=false&amp;width=70pc" alt=""></p>
-<ol start="5">
+<li>Nhấp vào <strong>Bảng điều khiển EC2</strong> và nhấp vào Khởi chạy phiên bản.
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(1).png?featherlight=false&amp;width=70pc" alt=""></li>
+<li>Trong Tên , đặt giá trị Máy chủ web cho IMD . Và kiểm tra cài đặt mặc định cho Amazon Machine Image bên dưới.
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(2).png?featherlight=false&amp;width=70pc" alt=""></li>
+<li>Chọn <strong>t2.micro</strong> trong Loại Phiên bản.</li>
+<li>Chọn cặp khóa mà bạn đã tạo ở phần tạo cặp khóa mới.
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(3).png?featherlight=false&amp;width=70pc" alt=""></li>
 <li>Nhập vào nút Chỉnh sử trong Cài đặt mạng để đặt không gian nơi EC2 sẽ được đặt.
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(4).png?featherlight=false&amp;width=70pc" alt=""></li>
-</ol>
-<p>Kiểm tra <strong>VPC</strong> và <strong>mạng con</strong> mặc định . <strong>Tự động gán IP công cộng</strong> được đặt thành <strong>Bật</strong> . Ngay bên dưới nó, tạo <strong>các nhóm Bảo mật</strong> để hoạt động như một tường lửa mạng. Các nhóm bảo mật sẽ chỉ định các giao thức và địa chỉ bạn muốn cho phép trong chính sách tường lửa của mình. Đối với nhóm bảo mật bạn hiện đang tạo, đây là quy tắc áp dụng cho EC2 sẽ được tạo. Sau khi nhập Immersion Day - Web Server trong Security group name và Description, chọn Add Security group rule và đặt HTTP thành Type.
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(4).png?featherlight=false&amp;width=70pc" alt="">
+Kiểm tra <strong>VPC</strong> và <strong>mạng con</strong> mặc định . <strong>Tự động gán IP công cộng</strong> được đặt thành <strong>Bật</strong> . Ngay bên dưới nó, tạo <strong>các nhóm Bảo mật</strong> để hoạt động như một tường lửa mạng. Các nhóm bảo mật sẽ chỉ định các giao thức và địa chỉ bạn muốn cho phép trong chính sách tường lửa của mình. Đối với nhóm bảo mật bạn hiện đang tạo, đây là quy tắc áp dụng cho EC2 sẽ được tạo. Sau khi nhập Immersion Day - Web Server trong Security group name và Description, chọn Add Security group rule và đặt HTTP thành Type.
 <img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(5).png?featherlight=false&amp;width=70pc" alt="">
 Cũng cho phép TCP/80 cho Dịch vụ Web bằng cách chỉ định nó.Chọn <strong>My IP</strong> trong nguồn.
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(6).png?featherlight=false&amp;width=70pc" alt=""></p>
-<ol start="6">
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(6).png?featherlight=false&amp;width=70pc" alt=""></li>
 <li>Tất cả các giá trị khác chấp nhận các giá trị mặc định, mở rộng bằng cách nhấp vào tab <strong>Chi tiết nâng cao</strong> ở cuối màn hình. Nhập các giá trị sau vào trường <strong>Dữ liệu</strong> người dùng và chọn <strong>Khởi chạy phiên</strong> bản.
-<img src="../../../../static/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(7).png" alt=""></li>
+<img src="../../../../static/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(7).png" alt="">
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(7).png?featherlight=false&amp;width=70pc" alt="">
+<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(8).png?featherlight=false&amp;width=70pc" alt=""></li>
 </ol>
-<p><img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(7).png?featherlight=false&amp;width=70pc" alt="">
-<img src="/images/1-Compute-AmazonEC2/1-1-EC2LinuxHandsonLab/1-1-2-LaunchaWebServerInstance/LaunchaWebServerInstance%20(8).png?featherlight=false&amp;width=70pc" alt=""></p>
 <pre tabindex="0"><code>#!/bin/sh
 
 # Install a LAMP stack
@@ -2647,19 +2635,19 @@ yum -y update
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675183120"></script>
-    <script src="/js/jquery.sticky.js?1675183120"></script>
-    <script src="/js/featherlight.min.js?1675183120"></script>
-    <script src="/js/highlight.pack.js?1675183120"></script>
+    <script src="/js/clipboard.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675937935"></script>
+    <script src="/js/jquery.sticky.js?1675937935"></script>
+    <script src="/js/featherlight.min.js?1675937935"></script>
+    <script src="/js/highlight.pack.js?1675937935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675183120"></script>
-    <script src="/js/learn.js?1675183120"></script>
-    <script src="/js/hugo-learn.js?1675183120"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675937935"></script>
+    <script src="/js/learn.js?1675937935"></script>
+    <script src="/js/hugo-learn.js?1675937935"></script>
 
-    <link href="/mermaid/mermaid.css?1675183120" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675183120"></script>
+    <link href="/mermaid/mermaid.css?1675937935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675937935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

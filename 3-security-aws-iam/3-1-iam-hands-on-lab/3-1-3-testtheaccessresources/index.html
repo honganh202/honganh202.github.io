@@ -12,21 +12,21 @@
     <title>Test the access for resources :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675183120" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675183120" rel="stylesheet">
-    <link href="/css/hybrid.css?1675183120" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675183120" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675183120" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675183120" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675183120" rel="stylesheet">
-    <link href="/css/theme.css?1675183120" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675183120" rel="stylesheet">
+    <link href="/css/nucleus.css?1675937935" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675937935" rel="stylesheet">
+    <link href="/css/hybrid.css?1675937935" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675937935" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675937935" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675937935" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675937935" rel="stylesheet">
+    <link href="/css/theme.css?1675937935" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675937935" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675183120" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675937935" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675183120"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675937935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675183120"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675183120"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675937935"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675937935"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675183120"></script>
+<script type="text/javascript" src="/js/search.js?1675937935"></script>
 
     
   </div>
@@ -1727,48 +1727,50 @@
 <ol>
 <li>
 <p>Log in AWS console and check <strong>IAM User</strong> and account alias. Also, check <strong>AWS region</strong> that launched EC2 instances are located. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%931.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%931.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Move on to the EC2 console  and click <strong>Instances</strong> menu. Select the instance named prod-instance and click <strong>Instance state</strong> button and <strong>Stop instance</strong> button. And click <strong>Stop</strong> button in the pop-up window. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%932.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%932.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>A warning sign appears that <code>dev-user</code> doesn&rsquo;t have permissions to perform the stop EC2 instance operation. This is because the previous hands on lab only allowed <strong>dev-user</strong> to perform the stop action on the ec2 instances with the resource tag <strong>Env(key)-dev(value)</strong>. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%933.png?featherlight=false&amp;width=90pc" alt="">
-4.Select the instance named <strong>dev-instance</strong> and click <strong>Instance state</strong> button and <strong>Stop instance</strong> button. And click <strong>Stop</strong> button in the pop-up window. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%934.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%933.png?featherlight=false&amp;width=70pc" alt=""></p>
+</li>
+<li>
+<p>Select the instance named <strong>dev-instance</strong> and click <strong>Instance state</strong> button and <strong>Stop instance</strong> button. And click <strong>Stop</strong> button in the pop-up window. 
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%934.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>After a few seconds, you can see the dev instance has been stopped. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%935.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%935.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 </ol>
 <h4 id="tip---iam-policy-simulator-optional">Tip - IAM Policy Simulator (Optional)</h4>
 <ol>
 <li>
 <p>Move to IAM Policy simulator. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%936.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%936.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Select dev-group</p>
 </li>
 <li>
 <p>Select DeleteTags and StopInstances actions to test. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%937.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%937.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>You can see both actions are denied but with different reasons. <strong>DeleteTags</strong> was denied because of 1 matching statements and <strong>StopInstances</strong> was Implicitly denied (no matching statements). 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%938.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%938.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Expand DeleteTags and click Show statement in DevPolicy (IAM Policy). It automatically highlights which statement exactly matched with your simulated action. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%939.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%939.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Expand StopInstances. The action was denied because the simulation resource is &ldquo;*&rdquo;. Please note that dev-group can only stop EC2 instances having dev tags. 
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%9310.png?featherlight=false&amp;width=90pc" alt="">
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%9311.png?featherlight=false&amp;width=90pc" alt="">
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%9310.png?featherlight=false&amp;width=70pc" alt="">
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/3-Testtheaccessforresources/3-Testtheaccessforresources%E2%80%9311.png?featherlight=false&amp;width=70pc" alt="">
 Now we will test the policy after adding dev tag to validate the policy correctly.</p>
 </li>
 </ol>
@@ -2629,19 +2631,19 @@ Now we will test the policy after adding dev tag to validate the policy correctl
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675183120"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675183120"></script>
-    <script src="/js/jquery.sticky.js?1675183120"></script>
-    <script src="/js/featherlight.min.js?1675183120"></script>
-    <script src="/js/highlight.pack.js?1675183120"></script>
+    <script src="/js/clipboard.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675937935"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675937935"></script>
+    <script src="/js/jquery.sticky.js?1675937935"></script>
+    <script src="/js/featherlight.min.js?1675937935"></script>
+    <script src="/js/highlight.pack.js?1675937935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675183120"></script>
-    <script src="/js/learn.js?1675183120"></script>
-    <script src="/js/hugo-learn.js?1675183120"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675937935"></script>
+    <script src="/js/learn.js?1675937935"></script>
+    <script src="/js/hugo-learn.js?1675937935"></script>
 
-    <link href="/mermaid/mermaid.css?1675183120" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675183120"></script>
+    <link href="/mermaid/mermaid.css?1675937935" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675937935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

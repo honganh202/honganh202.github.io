@@ -12,21 +12,21 @@
     <title>Chỉ định vai trò IAM cho phiên bản EC2 và kiểm tra quyền truy cập :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1675183121" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1675183121" rel="stylesheet">
-    <link href="/css/hybrid.css?1675183121" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1675183121" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1675183121" rel="stylesheet">
-    <link href="/css/auto-complete.css?1675183121" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1675183121" rel="stylesheet">
-    <link href="/css/theme.css?1675183121" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1675183121" rel="stylesheet">
+    <link href="/css/nucleus.css?1675937936" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1675937936" rel="stylesheet">
+    <link href="/css/hybrid.css?1675937936" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1675937936" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1675937936" rel="stylesheet">
+    <link href="/css/auto-complete.css?1675937936" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1675937936" rel="stylesheet">
+    <link href="/css/theme.css?1675937936" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1675937936" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1675183121" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1675937936" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1675183121"></script>
+    <script src="/js/jquery-3.3.1.min.js?1675937936"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1675183121"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1675183121"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1675937936"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1675937936"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1675183121"></script>
+<script type="text/javascript" src="/js/search.js?1675937936"></script>
 
     
   </div>
@@ -1716,26 +1716,26 @@
 
 
 	<hr>
-<p><img src="/images/IAMRole.png?featherlight=false&amp;width=90pc" alt=""></p>
+<p><img src="/images/IAMRole.png?featherlight=false&amp;width=70pc" alt=""></p>
 <ol>
 <li>
 <p>Để tạo Nhóm S3, hãy nhập vào <strong>Bảng điều khiển S3</strong> . Và sau đó, nhấp vào nút <strong>Tạo nhóm</strong>. Để biết thêm thông tin chi tiết về Amazon S3, vui lòng tham khảo chương Lưu trữ trên AWS.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%931.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%931.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Nhập <strong>tên nhóm</strong> duy nhất vào trường Tên nhóm. Trong phòng thí nghiệm này, nhập <code>iam-test-user_name</code>. Tất cả các tên bộ chứa trong Amazon S3 phải là duy nhất và không được trùng lặp. Nhấp vào nút <strong>Tạo nhóm</strong>, giữ nguyên các cài đặt còn lại.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%932.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%932.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Tải lên bất kỳ tệp nào (mẫu: aws-logo-picture ) trong bộ chứa S3.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%933.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%933.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Tạo thêm một nhóm có tên <code>iam-test-other-user_name</code>. Tải lên bất kỳ tệp nào trong bộ chứa S3.</p>
 </li>
 <li>
 <p>Chuyển sang <strong>bảng điều khiển IAM</strong> để tạo vai trò IAM cho phiên bản EC2. Nhấp vào <strong>Vai trò</strong> ở phía bên trái của bảng điều khiển IAM và nhấp vào nút <strong>Tạo vai trò</strong>. Ở bước đầu tiên, hãy chọn EC2 cho thực thể đáng tin cậy và nhấp vào <strong>Tiếp theo: Quyền</strong>. Vai trò IAM có thể được áp dụng cho nhiều dịch vụ AWS bao gồm EC2 và Lambda, cũng như các tài khoản AWS khác, danh tính Web và liên kết SAML 2.0.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%934.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%934.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Ở bước 2, hãy nhấp vào Tạo chính sách để tạo chính sách gắn với vai trò của phiên bản EC2. Trên tab JSON, dán chính sách bên dưới và nhấp vào Tiếp theo: Thẻ.</p>
@@ -1762,26 +1762,26 @@
          }
      ]
 }
-</code></pre><p><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%935.png?featherlight=false&amp;width=90pc" alt=""></p>
+</code></pre><p><img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%935.png?featherlight=false&amp;width=70pc" alt=""></p>
 <ol start="7">
 <li>
 <p>Để bỏ qua thao tác thêm thẻ, hãy nhấp vào <strong>Tiếp theo: Đánh giá</strong> và nhập <code>IAMBucketTestPolicy</code> vào hộp nhập Tên. Nhấp vào <strong>Tạo chính sách</strong> để đính kèm với vai trò IAM.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%936.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%936.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Quay lại trang mà bạn đang tạo Vai trò IAM, nhấn nút làm mới ở góc bên phải và nhập <code>IAMBucketTestPolicy</code>. Nếu bạn thấy chính sách bạn vừa tạo trong danh sách bên dưới, hãy chọn chính sách đó và chuyển sang bước tiếp theo.</p>
 </li>
 <li>
 <p>Bước 4, nhập IAMBuketTestRole và tạo vai trò.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%937.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%937.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Chuyển sang bảng điều khiển EC2 để gắn vai trò IAM trên phiên bản EC2. Tại thời điểm này, nếu bạn chưa tạo các phiên bản EC2 trong phòng thí nghiệm trước đó, hãy kiểm tra ở trên cùng bên phải để xem liệu Khu vực AWS có được thiết lập đúng cách hay không. Chọn <code>prod-instance</code>, sau đó nhấp vào nút <strong>Connect</strong>.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%938.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%938.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Kết nối với phiên bản bằng cách sử dụng tùy chọn Kết nối phiên bản EC2 và nhấp vào nút <strong>Kết nối</strong>. Sau đó, thiết bị đầu cuối sẽ đi ra như dưới đây. Nhập aws s3 ls và bạn không thể lấy danh sách bộ chứa S3.
-<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%9311.png?featherlight=false&amp;width=90pc" alt=""></p>
+<img src="/images/3-Security-AWSIAM/3-1-IAMHandsonLab/4-AssignIAMRoleforEC2InstanceandTesttheaccess/4-AssignIAMRoleforEC2InstanceandTesttheaccess%E2%80%9311.png?featherlight=false&amp;width=70pc" alt=""></p>
 </li>
 <li>
 <p>Quay lại trang Instances và chọn prod-instance. Nhấp vào nút Hành động và chọn Bảo mật và nhấp vào Sửa đổi vai trò IAM.</p>
@@ -2653,19 +2653,19 @@ aws s3 ls iam-test-other-user_name
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1675183121"></script>
-    <script src="/js/perfect-scrollbar.min.js?1675183121"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1675183121"></script>
-    <script src="/js/jquery.sticky.js?1675183121"></script>
-    <script src="/js/featherlight.min.js?1675183121"></script>
-    <script src="/js/highlight.pack.js?1675183121"></script>
+    <script src="/js/clipboard.min.js?1675937936"></script>
+    <script src="/js/perfect-scrollbar.min.js?1675937936"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1675937936"></script>
+    <script src="/js/jquery.sticky.js?1675937936"></script>
+    <script src="/js/featherlight.min.js?1675937936"></script>
+    <script src="/js/highlight.pack.js?1675937936"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1675183121"></script>
-    <script src="/js/learn.js?1675183121"></script>
-    <script src="/js/hugo-learn.js?1675183121"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1675937936"></script>
+    <script src="/js/learn.js?1675937936"></script>
+    <script src="/js/hugo-learn.js?1675937936"></script>
 
-    <link href="/mermaid/mermaid.css?1675183121" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1675183121"></script>
+    <link href="/mermaid/mermaid.css?1675937936" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1675937936"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
