@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Usage Plans and Message Throttling (Optional) on AWS System Manager</title>
+    <link>//localhost:1313/2-network---amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-8-usage-plansmessage-throttling/</link>
+    <description>Recent content in Usage Plans and Message Throttling (Optional) on AWS System Manager</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="//localhost:1313/2-network---amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-8-usage-plansmessage-throttling/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
