@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Message Caching (Optional) on AWS System Manager</title>
-    <link>//localhost:1313/2-network---amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-7-message-caching-optional/</link>
+    <link>/2-network---amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-7-message-caching-optional/</link>
     <description>Recent content in Message Caching (Optional) on AWS System Manager</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/2-network---amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-7-message-caching-optional/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/2-network---amazon-vpc/2-2-amazonapi-gateway-hands-on-lab/2-2-7-message-caching-optional/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

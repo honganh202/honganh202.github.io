@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create AWS IAM Identities on AWS System Manager</title>
-    <link>//localhost:1313/3-security---aws-iam/3-1-iam-hands-on-lab/3-1-2-createawsiami-dentities/</link>
+    <link>/3-security---aws-iam/3-1-iam-hands-on-lab/3-1-2-createawsiami-dentities/</link>
     <description>Recent content in Create AWS IAM Identities on AWS System Manager</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/3-security---aws-iam/3-1-iam-hands-on-lab/3-1-2-createawsiami-dentities/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/3-security---aws-iam/3-1-iam-hands-on-lab/3-1-2-createawsiami-dentities/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

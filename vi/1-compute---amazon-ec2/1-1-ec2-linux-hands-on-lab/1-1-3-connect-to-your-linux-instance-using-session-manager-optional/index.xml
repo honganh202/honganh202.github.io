@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kết nối với phiên bản Linux của bạn bằng Trình quản lý phiên (Tùy chọn) on AWS System Manager</title>
-    <link>//localhost:1313/vi/1-compute---amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-3-connect-to-your-linux-instance-using-session-manager-optional/</link>
+    <link>/vi/1-compute---amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-3-connect-to-your-linux-instance-using-session-manager-optional/</link>
     <description>Recent content in Kết nối với phiên bản Linux của bạn bằng Trình quản lý phiên (Tùy chọn) on AWS System Manager</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <atom:link href="//localhost:1313/vi/1-compute---amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-3-connect-to-your-linux-instance-using-session-manager-optional/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/vi/1-compute---amazon-ec2/1-1-ec2-linux-hands-on-lab/1-1-3-connect-to-your-linux-instance-using-session-manager-optional/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>EC2 Linux Hands on Lab on AWS System Manager</title>
-    <link>//localhost:1313/1-compute---amazon-ec2/1-1-ec2-linux-hands-on-lab/</link>
+    <link>/1-compute---amazon-ec2/1-1-ec2-linux-hands-on-lab/</link>
     <description>Recent content in EC2 Linux Hands on Lab on AWS System Manager</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/1-compute---amazon-ec2/1-1-ec2-linux-hands-on-lab/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/1-compute---amazon-ec2/1-1-ec2-linux-hands-on-lab/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
